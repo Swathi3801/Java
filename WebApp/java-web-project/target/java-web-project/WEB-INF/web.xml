@@ -1,0 +1,45 @@
+<web-app
+  xmlns="https://www.w3.org/2001/XMLSchema" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsd="https://www.w3.org/2001/XMLSchema"
+  targetNamespace="https://jakarta.ee/xml/ns/jakartaee" elementFormDefault="qualified"
+  attributeFormDefault="unqualified" version="6.0">
+
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+    <init-param>
+      <param-name>packages</param-name>
+      <param-value>com.organisation.project.rest</param-value>
+  </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Welcome</servlet-name>
+    <servlet-class>WelcomeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Welcome</servlet-name>
+    <url-pattern>/welcome</url-pattern>
+  </servlet-mapping>
+  <context-param> 
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+        context paramter
+    </param-value>
+</context-param>
+<listener>
+  <!-- <description>Servlet Context Listener Example</description> -->
+  <listener-class>MyServletContextListener</listener-class>
+ </listener>
+
+</web-app>
